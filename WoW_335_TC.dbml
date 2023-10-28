@@ -4,7 +4,7 @@ Project WoW_3_3_5_12340{
 
 Table "DBC"."Achievement" {
     "ID" int [primary key]
-    "Faction" int [ref: < "DBC"."Faction"."ID"]
+    "Faction" int
     "Instance_ID" int [ref: < "DBC"."Map"."ID"]
     "Supercedes" int [ref: < "DBC"."Achievement"."ID"]
     "Title_lang" locstring
