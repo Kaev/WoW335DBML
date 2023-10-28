@@ -3,6 +3,9 @@
 This repository is a community effort to represent the entire data structure of World of Warcraft 3.3.5 build 12340.  
 This includes all Database Client files (short: DBC) and all serverside tables of [TrinityCore](https://github.com/TrinityCore/TrinityCore/tree/3.3.5).  
 
+## How to use
+You can find all the data on https://dbdocs.io/Kaev/WoW_3_3_5_12340.
+
 ## Work in Progress
 - Relationships inside DBC files (Mostly done)
 - Relationships of all TC tables
