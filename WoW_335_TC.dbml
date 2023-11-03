@@ -1875,12 +1875,12 @@ Table "DBC"."SpellShapeshiftForm" {
 }
 Table "DBC"."SpellVisual" {
     "ID" int [primary key]
-    "PrecastKit" int
-    "CastKit" int
-    "ImpactKit" int
-    "StateKit" int
-    "StateDoneKit" int
-    "ChannelKit" int
+    "PrecastKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "CastKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "ImpactKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "StateKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "StateDoneKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "ChannelKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
     "HasMissile" int
     "MissileModel" int
     "MissilePathType" int
@@ -1888,8 +1888,8 @@ Table "DBC"."SpellVisual" {
     "MissileSound" int
     "AnimEventSoundID" int [ref: < "DBC"."SoundEntries"."ID"]
     "Flags" int
-    "CasterImpactKit" int
-    "TargetImpactKit" int
+    "CasterImpactKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "TargetImpactKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
     "MissileAttachment" int
     "MissileFollowGroundHeight" int
     "MissileFollowGroundDropSpeed" int
@@ -1897,9 +1897,9 @@ Table "DBC"."SpellVisual" {
     "MissileFollowGroundFlags" int
     "MissileMotion" int
     "MissileTargetingKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
-    "InstantAreaKit" int
-    "ImpactAreaKit" int
-    "PersistentAreaKit" int
+    "InstantAreaKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "ImpactAreaKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
+    "PersistentAreaKit" int [ref: < "DBC"."SpellVisualKit"."ID"]
     "MissileCastOffset" float
     "MissileImpactOffset" float
     Note: 'SpellVisual client database table for version 3.3.5.12340'
